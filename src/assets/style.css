@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Tambahkan media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Susun elemen dalam satu kolom di mobile */
+    grid-template-areas:
+      "note-form"
+      "notes-list"; /* Note form berada di atas */
+    gap: 10px; /* Kurangi gap untuk layar kecil */
+    padding: 10px; /* Sesuaikan padding */
+  }
+}
+
+/* Pastikan elemen-elemen menerima area yang tepat */
+
+note-form {
+  grid-area: note-form;
+}
+
+notes-list {
+  grid-area: notes-list;
+}
+
+.note-list {
+  background-color: #10b981;
+}
